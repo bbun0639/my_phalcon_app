@@ -1,0 +1,60 @@
+ <div class="row">
+    <div class="col-sm">
+     
+    </div>
+    <div class="col-sm">
+    <br></br>
+    <br></br>
+    <br></br>
+    
+    
+<form action="" method="post" enctype="multipart/form-data">
+	<input type="hidden"  name="profileId"  value="<?php echo $profile->id;?>">
+  <div class="form-group">
+    <label>Email address</label>
+    <input type="email" name="email" class="form-control" id="email"   required value="<?php echo $profile->username?>">
+  </div>
+  
+  <div class="form-group">
+    <label>Firstname</label>
+    <input type="text" name="firstname" class="form-control" id="firstname"   required value="<?php echo $profile->first_name?>"> 
+  </div>
+  
+   <div class="form-group">
+    <label>Picture</label>
+    <div class="custom-file">
+          <input type="file" name="photo"  class="custom-file-input"  >
+          <label class="custom-file-label" >Choose file</label>
+    </div>
+  </div>
+  <center>
+  <?php if($profile->picture!=''){?>
+   <div class="form-group">  
+          <img style="width:100px; height:100px" src="<?php echo $this->url->getBaseUri().'public/img/'.$profile->picture; ?>">
+  </div>
+  <?php }?>
+  
+    <button type="submit" class="btn btn-info">Submit</button>
+    <a href="<?php echo $this->url->getBaseUri(); ?>" class="btn btn-warning">Back</a>
+  </center>
+
+  <!-- About 
+  <section class="bg-primary" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading text-white">About Me!</h2><br></br>
+            <img class="img-fluid mb-5 d-block mx-auto" src="<?php echo $this->url->getBaseUri(); ?>public/img/bbun.png" alt="">
+            <hr class="light my-4">
+            <p class="text-faded mb-4">นายปฐมภพ สุนันตา <br>590610639</br></p>
+            <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+</form>
+    </div>
+    <div class="col-sm">
+    </div>
+  </div>
